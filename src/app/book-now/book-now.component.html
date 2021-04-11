@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="justify-content-center mt-5 mb-4" style="width: 80%; border: 1px solid #000">
+    <div style="background-color: darkgray">
+      <p class="ml-4 p-2">Customer Details</p>
+    </div>
+    <form enctype="application/x-www-form-urlencoded">
+      <div class="row m-3">
+        <div class="col">
+          <label for="inputEmail4">First Name</label>
+          <input type="text" [(ngModel)]="customerDet.firstName" name="firstName" class="
+            form-control" placeholder="First name" required="" style="background-color: #e6f2ff" />
+        </div>
+        <div class="col">
+          <label for="inputEmail4">Last Name</label>
+          <input type="text" [(ngModel)]="customerDet.lastName" name="lastName" class="
+            form-control" placeholder="Last name" required style="background-color: #e6f2ff" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col ml-4">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="xyz@gmail.com" required
+            style="background-color: #e6f2ff" [(ngModel)]="customerDet.email" name="email" />
+        </div>
+        <div class=" form-group col ml-3 mr-3">
+          <label for="inputPassword4">Contact No.</label>
+          <input type="contact" [(ngModel)]="customerDet.contactNo" name="contactNo" class="
+            form-control" id="inputPassword4" placeholder="Enter 10 digit No." required
+            style="background-color: #e6f2ff" />
+        </div>
+      </div>
+      <div class="form-group m-3">
+        <label for="inputAddress">Address</label>
+        <input type="text" [(ngModel)]="customerDet.address1" name="address1" class=" form-control" id="inputAddress"
+          placeholder="Building, House No." required style="background-color: #e6f2ff" />
+      </div>
+      <div class="form-group m-3">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" [(ngModel)]="customerDet.address2" name="address2" class=" form-control" id="inputAddress2"
+          placeholder="Apartment, studio, or floor" required style="background-color: #e6f2ff" />
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4 m-3">
+          <label for="inputCity">City</label>
+          <input type="text" [(ngModel)]="customerDet.city" name="city" class=" form-control" id="inputCity" required
+            style="background-color: #e6f2ff" />
+        </div>
+        <div class="form-group col-md-4 m-3">
+          <label for="inputState">State</label>
+          <input id="inputState" [(ngModel)]="customerDet.state" name="state" class=" form-control" required
+            style="background-color: #e6f2ff" />
+        </div>
+        <div class="form-group col-md-2 m-3">
+          <label for="inputZip">Zip</label>
+          <input type="text" [(ngModel)]="customerDet.zip" name="zip" class=" form-control" id="inputZip" required
+            style="background-color: #e6f2ff" />
+        </div>
+      </div>
+      <div class="form-group m-3">
+        <label for="exampleFormControlFile1">Add Car image</label>
+        <input type="file" (change)="onSelectedFile($event)" class="form-control-file" id="exampleFormControlFile1" />
+      </div>
+      <div class="form-row">
+        <div class="form-group col m-3 ml-4">
+          <label for="inputEmail4">Car Number</label>
+          <input type="email" [(ngModel)]="customerDet.carNo" name="carNo" class=" form-control" id="inputEmail4"
+            required style="background-color: #e6f2ff" />
+        </div>
+        <div class="form-group col m-3">
+          <label for="date">Schedule date</label>
+          <input type="date" [(ngModel)]="customerDet.date" name="date" class=" form-control" id="date" required
+            style="background-color: #e6f2ff" />
+        </div>
+      </div>
+    </form>
+    <div class="row m-3">
+      <p style="color: red">Note: All Fields are Mandatory</p>
+      <div class="col offset-6">
+        <button type="submit" (click)="proceed()" class="btn btn-primary">Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>
